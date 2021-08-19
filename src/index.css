@@ -1,13 +1,257 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
+body {
+  font-family: 'Roboto', sans-serif;
+}
+/* Configuracion Inicial */
+.main {
+  height: 100vh;
+}
+.header {
+  height: 15%;
+  background-color: #744cbc;
+}
+.form {
+  height: 30%;
+}
+/* .list {
+  height: 55%;
+} */
+/* Configuracion Inicial */
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Header */
+.header-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-container h1, a {
+  margin: 0px 25px;
+  font-size: 48px;
+  color: white;
+}
+@media all and (max-width: 480px) {
+  .header-container h1 {
+    font-size: 26px;
+  }
+}
+/* Header */
+
+/* Form */
+.form-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-container h1 {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0px;
+  color: #744cbc;
+}
+.form-container form {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.form-container form input {
+  height: 20%;
+  width: 60%;
+  border-radius: 5px;
+  border: 2px solid #744cbc;
+  color: #744cbc;
+  text-align: center;
+  font-size: 15px;
+}
+.form-container form input::placeholder {
+  color: #744cbc;
+}
+.form-container button {
+  height: 20%;
+  width: 60%;
+  margin: 20px 0px;
+  background-color: #744cbc;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid #744cbc;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.form-container button:hover {
+  background-color: white;
+  color: #744cbc;
+}
+@media all and (max-width: 480px) {
+  .form {
+    height: 45%;
+  }
+  .form-container h1 {
+    font-size: 24px;
+  }
+  .form-container form input {
+    height: 18%;
+    width: 80%;
+  }
+  .form-container button {
+    height: 18%;
+    width: 80%;
+  }
+}
+/* Form */
+
+/* Form-Edit */
+.form-edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-edit h1 {
+  margin: 15px 0px;
+  color: #744cbc;
+}
+.form-edit form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.form-edit form input {
+  width: 60%;
+  height: 40px;
+  border: 2px solid #744cbc;
+  margin: 10px 0px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #744cbc;
+  font-weight: 600;
+}
+.form-edit form input::placeholder {
+  color: #744cbc;
+  font-weight: 600;
+}
+.form-edit button {
+  height: 50px;
+  width: 380px;
+  margin: 20px 0px;
+  background-color: #744cbc;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid #744cbc;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.form-edit button:hover {
+  background-color: white;
+  color: #744cbc;
+}
+@media all and (max-width: 480px) {
+  .form-edit h1 {
+    font-size: 24px ;
+  }
+  .form-edit form input {
+    width: 80%;
+  }
+  .form-edit button {
+    width: 320px;
+    height: 40px;
+  }
+}
+/* Form-Edit */
+
+/* List */
+.list-container {
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list-container h1 {
+  margin: 10px 0px;
+  color: #744cbc;
+}
+.main-table {
+  margin: 10px 0px;
+  /* height: 80%; */
+  width: 40%;
+}
+thead {
+  background-color: #744cbc;
+  color: white;
+  /* height: 10%; */
+  height: 65px;
+}
+tbody {
+  /* height: 5%; */
+  background-color: #744cbc;
+}
+@media all and (max-width: 480px) {
+  .list-container h1 {
+    font-size: 24px;
+  }
+  .main-table {
+    width: 98%;
+  }
+  thead {
+    height: 55px;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 1200px) {
+  .main-table {
+    width: 60%;
+  }
+}
+/* List */
+
+/* Product */
+td {
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  height: 65px;
+}
+.acciones {
+  height: 65px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.acciones button {
+  height: 50%;
+  width: 35%;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.acciones button:hover {
+  background-color: white;
+  color: #744cbc;
+}
+@media all and (max-width: 1200px) {
+  td {
+    font-size: 14px;
+  }
+  .acciones button {
+    width: 45%;
+    height: 70%;
+    font-size: 12px;
+  }
 }
